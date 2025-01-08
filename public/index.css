@@ -1,0 +1,831 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Anta&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #342E45;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+    padding: 60px 50px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 30px;
+}
+
+.box {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #433B59;
+    box-shadow: 6px 6px 6px 1px #00000040;
+    border-radius: 20px;
+    transition: 0.4s ease all;
+    position: relative;
+    width: 100%;
+
+    max-width: 250px;
+}
+
+.box .dot {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4EBA6B;
+    opacity: 0;
+    transition: 0.4s ease all;
+}
+
+.box:hover .dot {
+    opacity: 1;
+}
+
+.box a {
+    font-family: "alata", serif;
+    color: #FFFFFF;
+    font-size: 28px;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.note-box {
+    height: 100%;
+    min-height: 200px;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #433B59;
+    box-shadow: 6px 6px 6px 1px #00000040;
+    border-radius: 20px;
+    transition: 0.4s ease all;
+    position: relative;
+    max-width: 250px;
+
+}
+
+.note-box .dot {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4EBA6B;
+    opacity: 0;
+    transition: 0.4s ease all;
+}
+
+.note-box:hover .dot {
+    opacity: 1;
+}
+
+.note-box a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.note-box a .title {
+    color: #fff;
+    font-family: "alata";
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-size: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.note-box a .text {
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    color: #ffffff;
+    font-family: "poppins";
+}
+
+.note-box a p {
+    position: absolute;
+    color: #ffffff90;
+    right: 15px;
+    bottom: 15px;
+    font-family: "poppins";
+}
+
+.absolute {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    font-family: "anta";
+    font-size: 30px;
+}
+
+.register {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #433B59;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px 1px #00000040;
+
+}
+
+.register .container {
+    min-width: 300px;
+    width: 400px;
+    padding: 30px;
+}
+
+.register .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.register .bar .title {
+    color: #fff;
+    font-family: "anta";
+    font-size: 44px;
+}
+
+.register .bar .close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C61A1A40;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease all;
+}
+
+.register .bar .close img {
+    width: 14px;
+}
+
+.register .bar .close:hover {
+    background-color: #C61A1A70;
+
+}
+
+.register form .form-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register form .form-item:nth-last-of-type(1) {
+    margin-bottom: 5px;
+}
+
+.register form .form-item input {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-family: "poppins";
+
+}
+
+.register form .form-item label {
+    position: absolute;
+    left: 15px;
+    font-family: "poppins";
+    top: 10px;
+    font-size: 14px;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s ease all;
+    color: #ffffff90;
+}
+
+.register form .form-item input:focus+label,
+.register form .form-item input:not(:placeholder-shown)+label {
+    top: -9px;
+    font-size: 12px;
+    background-color: #433B59;
+    color: #ffffff;
+}
+
+
+
+
+
+.register form .text {
+    color: #fff;
+    font-family: "poppins";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.register form .text a {
+    color: #fff;
+    font-weight: 600;
+    font-family: "poppins";
+    font-size: 14px;
+
+}
+
+.register form .register-btn {
+    width: 100%;
+    margin-top: 20px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    font-family: "anta";
+    font-size: 18px;
+    transition: 0.4s ease all;
+}
+
+.register form .register-btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.profile-container {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+}
+
+.profile-container .wrapper {
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    background-color: #433B59;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 6px 6px 6px 1px #00000040;
+
+}
+
+
+
+.profile-container .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-container .bar .title {
+    color: #fff;
+    font-family: "anta";
+    font-size: 34px;
+}
+
+.profile-container .bar .close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C61A1A40;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease all;
+}
+
+.profile-container .bar .close img {
+    width: 14px;
+}
+
+.profile-container .bar .close:hover {
+    background-color: #C61A1A70;
+
+}
+
+.profile-container .profile-item {
+    font-family: "poppins";
+    color: #ffffffbe;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    width: max-content;
+}
+
+.profile-container .profile-item span {
+    font-weight: 300;
+    color: #fff;
+}
+
+.profile-container .profile-item.password {
+    cursor: pointer;
+}
+
+.profile-container .profile-item#profile-password span {
+    -webkit-text-security: disc;
+    font-size: 16px;
+}
+
+.profile-container #profile-password.active span {
+    -webkit-text-security: none;
+}
+
+.profile-container .log-out {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    font-family: "poppins";
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: 0.4s ease all;
+}
+
+.profile-container .log-out:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+.notes-container {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+}
+
+.notes-container .wrapper {
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    background-color: #433B59;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 6px 6px 6px 1px #00000040;
+
+}
+
+
+
+.notes-container .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.notes-container .bar .title {
+    color: #fff;
+    font-family: "anta";
+    font-size: 44px;
+}
+
+.notes-container .boxes {
+    display: flex;
+    gap: 10px;
+}
+
+.notes-container .bar .close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C61A1A40;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease all;
+}
+
+.notes-container .bar .close img {
+    width: 14px;
+}
+
+.notes-container .bar .close:hover {
+    background-color: #C61A1A70;
+
+}
+
+
+.notes-container .bar .edit {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #304ED040;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease all;
+}
+
+.notes-container .bar .edit img {
+    width: 14px;
+}
+
+.notes-container .bar .edit:hover {
+    background-color: #304ED070;
+
+}
+
+
+
+.notes-container .profile-item {
+    font-family: "poppins";
+    color: #ffffffbe;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.notes-container .profile-item span {
+    font-weight: 300;
+    color: #fff;
+}
+
+
+.notes-container .log-out {
+    width: 200px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    background-color: #fff;
+    font-family: "poppins";
+    cursor: pointer;
+    margin-top: 30px;
+    border-radius: 5px;
+    transition: 0.4s ease all;
+}
+
+.notes-container .log-out:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+.notes-container .text {
+    color: #fff;
+    font-size: 16px;
+    font-family: "poppins";
+}
+
+
+
+.add-note-container {
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+
+}
+
+.add-note-container .container {
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    background-color: #433B59;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 6px 6px 6px 1px #00000040;
+
+
+}
+
+.add-note-container .bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-note-container .bar .title {
+    color: #fff;
+    font-family: "anta";
+    font-size: 44px;
+}
+
+.add-note-container .bar .close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C61A1A40;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.4s ease all;
+}
+
+.add-note-container .bar .close img {
+    width: 14px;
+}
+
+.register .bar .close:hover {
+    background-color: #C61A1A70;
+
+}
+
+.add-note-container form .form-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.register form .form-item:nth-last-of-type(1) {
+    margin-bottom: 5px;
+}
+
+.add-note-container form .form-item input {
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-family: "poppins";
+
+}
+
+.add-note-container form .form-item textarea {
+    width: 100%;
+    height: 330px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: "poppins";
+    resize: none;
+    overflow-y: scroll;
+}
+
+.add-note-container form .form-item textarea::-webkit-scrollbar {
+    width: 0;
+}
+
+.add-note-container form .form-item textarea::placeholder {
+    color: #ffffff90;
+    font-size: 14px;
+}
+
+.add-note-container form .form-item label {
+    position: absolute;
+    left: 15px;
+    font-family: "poppins";
+    top: 10px;
+    font-size: 14px;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: 0.4s ease all;
+    color: #ffffff90;
+}
+
+.add-note-container form .form-item input:focus+label,
+.add-note-container form .form-item input:not(:placeholder-shown)+label {
+    top: -9px;
+    font-size: 12px;
+    background-color: #433B59;
+    color: #ffffff;
+}
+
+
+.add-note-container form .add-note-btn {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #0dc758;
+    border: none;
+    font-family: "anta";
+    font-size: 18px;
+    transition: 0.4s ease all;
+}
+
+.add-note-container form .add-note-btn:hover {
+    background-color: #0a8e4c;
+    color: #fff;
+}
+
+
+
+
+.add-note-container form .edit-note-btn {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #095ac4;
+    border: none;
+    font-family: "anta";
+    font-size: 16px;
+    transition: 0.4s ease all;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.add-note-container form .edit-note-btn:hover {
+    background-color: #1c4e90;
+    color: #fff;
+}
+
+
+.add-note-container .delete-note-btn {
+    width: 100%;
+    height: 30px;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #c20e0e;
+    border: none;
+    font-family: "anta";
+    font-size: 16px;
+    transition: 0.4s ease all;
+}
+
+.add-note-container .delete-note-btn:hover {
+    background-color: #f90909;
+    color: #fff;
+}
+
+@media screen and (max-width: 1300px) {
+    .main {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .note-box {
+        max-width: 250px;
+    }
+
+    .box {
+        max-width: 250px;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .note-box {
+        max-width: 300px;
+    }
+
+    .box {
+        max-width: 300px;
+    }
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .note-box {
+        max-width: 300px;
+    }
+
+    .box {
+        max-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .note-box {
+        max-width: 200px;
+    }
+
+    .box {
+        max-width: 200px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .main {
+        padding: 30px 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .box {
+        min-height: 150px;
+        min-width: 150px;
+    }
+
+    .note-box {
+        min-height: 150px;
+        min-width: 150px;
+    }
+
+    .box a {
+        font-size: 20px;
+    }
+
+    .note-box a .title {
+        font-size: 20px;
+    }
+    
+    .note-box a .text {
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+        color: #ffffff;
+        font-family: "poppins";
+        font-size: 14px;
+    }
+    
+    .note-box a p {
+        position: absolute;
+        color: #ffffff90;
+        right: 15px;
+        bottom: 15px;
+        font-family: "poppins";
+        font-size: 12px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    .register .container {
+        min-width: 300px;
+        width: 320px;
+        padding: 30px;
+    }
+
+    .add-note-container .bar .title {
+        font-size: 24px;
+    }
+    .notes-container .bar .title {
+        font-size: 24px;
+    }
+
+}

@@ -1,0 +1,23 @@
+<div class="notes-container">
+    <div class="wrapper">
+        <div class="bar">
+            <div class="title">
+                <%= foundNote.title %>
+            </div>
+            <div class="boxes">
+                <div class="edit">
+                    <a href="/edit/<%= foundNote._id %>">
+                        <img src="/images/edit.svg">
+                    </a>
+                </div>
+                <a href="/home" class="close">
+                    <img src="/images/close.svg">
+                </a>
+            </div>
+
+        </div>
+        <div class="text">
+            <%= foundNote.content %>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="add-note-container">
+    <div class="container">
+        <div class="bar">
+            <div class="title">
+                Notu Düzenle
+            </div>
+            <a href="/home" class="close">
+                <img src="/images/close.svg">
+            </a>
+        </div>
+
+        <form action="/edit/<%= foundNote._id %>" method="post">
+            <div class="form-item">
+                <input type="text" id="title" name="title" placeholder=" ">
+                <label for="title">Not Başlığı</label>
+            </div>
+
+            <div class="form-item">
+                <textarea type="text" name="content" placeholder="Not İçeriği"></textarea>
+            </div>
+                <input type="submit" class="edit-note-btn" value="Notu Yenile">
+        </form>
+        <form action="/delete/<%= foundNote._id %>?_method=DELETE" method="post">
+            <input type="submit" class="delete-note-btn" value="Notu Sil">
+        </form>
+    </div>
+
+</div>

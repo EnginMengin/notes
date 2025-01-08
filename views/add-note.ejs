@@ -1,0 +1,25 @@
+<div class="add-note-container">
+    <div class="container">
+        <div class="bar">
+            <div class="title">
+                Not Ekle
+            </div>
+            <a href="/home" class="close">
+                <img src="/images/close.svg">
+            </a>
+        </div>
+
+        <form action="/add/note" method="post">
+            <div class="form-item">
+                <input type="text" id="title" name="title" placeholder=" ">
+                <label for="title">Not Başlığı</label>
+            </div>
+
+            <div class="form-item">
+                <textarea type="text" name="content" placeholder="Not İçeriği"></textarea>
+            </div>
+            <input type="submit" class="add-note-btn" value="Not Ekle">
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,43 @@
+<main class="main">
+
+    <div class="box">
+        <a href="/profile">
+            <div class="child">
+                Hesabım
+            </div>
+        </a>
+        <div class="dot"></div>
+
+    </div>
+
+    <div class="box">
+        <a href="/add/note">
+            <div class="child">
+                Not Ekle
+            </div>
+        </a>
+        <div class="dot"></div>
+
+    </div>
+
+    <% if (user && user.notes.length> 0) { %>
+            <% user.notes.forEach(function(note) { %>
+                <div class="note-box">
+                    <a href="/note/<%= note._id%>">
+                        <div class="title">
+                            <%= note.title %>
+                        </div>
+                        <div class="text">
+                            <%= note.content %>
+
+                        </div>
+                        <p>
+                            <%= (note.createdAt).toLocaleString("tr-TR")%>
+                        </p>
+                    </a>
+                    <div class="dot"></div>
+                </div>
+                <% }); %>
+            <% } %>
+
+</main>
